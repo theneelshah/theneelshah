@@ -77,7 +77,7 @@ export const hackernews = async (args: string[]): Promise<string> => {
 };
 
 export const pwd = async (args: string[]): Promise<string> => {
-  return `https://www.theneelshah.com`;
+  return `<u><a class="text-light-blue dark:text-dark-blue underline" href="https://www.theneelshah.com" target="_blank">https://www.theneelshah.com</a></u>`;
 };
 
 export const echo = async (args: string[]): Promise<string> => {
@@ -121,6 +121,8 @@ export const banner = (args?: string[]): string => {
       #    #    #  #       #   ##  #       #       #       #    #  #    #  #    #  #    #
       #    #    #  ######  #    #  ######  ######  ######   ####   #    #  #    #  #    #
 </div>
+
+Hey there! I'm Neel Shah, currently doing my Masters of Software Engineering at University of California, Irvine.
 
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
