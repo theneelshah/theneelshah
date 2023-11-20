@@ -2,6 +2,7 @@
 
 import * as bin from './index';
 import config from '../../../config.json';
+import headShotImg from '../../../public/assets/headshot/headshot.png';
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -14,7 +15,7 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `Welcome to my portfolio! Here are all the available commands:
 \n${c}\n
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
@@ -40,16 +41,7 @@ More about me:
 
 export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
-  return 'Opening resume...';
-};
-
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
+  return 'Opening my resume...';
 };
 
 // Contact
@@ -61,13 +53,13 @@ export const email = async (args: string[]): Promise<string> => {
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
+  return 'Opening my github profile...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-  return 'Opening linkedin...';
+  return 'Opening my linkedin profile...';
 };
 
 // Search
@@ -76,14 +68,9 @@ export const google = async (args: string[]): Promise<string> => {
   return `Searching google for ${args.join(' ')}...`;
 };
 
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
-};
-
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
+export const hackernews = async (args: string[]): Promise<string> => {
+  window.open('https://news.ycombinator.com/');
+  return `Opening Hackernews...`;
 };
 
 export const reddit = async (args: string[]): Promise<string> => {
@@ -134,21 +121,22 @@ export const emacs = async (args?: string[]): Promise<string> => {
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
+  <div style="display: inline-flex; align-items: center;">
+    <img src=${headShotImg.src} width="200px" style="margin-right: 16px"/>
+
+    #####  #    #  ######  #    #  ######  ######  #        ####   #    #    ##    #    # 
+      #    #    #  #       ##   #  #       #       #       #       #    #   #  #   #    # 
+      #    ######  #####   # #  #  #####   #####   #        ####   ######  #    #  ###### 
+      #    #    #  #       #  # #  #       #       #            #  #    #  ######  #    # 
+      #    #    #  #       #   ##  #       #       #       #    #  #    #  #    #  #    #
+      #    #    #  ######  #    #  ######  ######  ######   ####   #    #  #    #  #    #
+</div>
 
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
