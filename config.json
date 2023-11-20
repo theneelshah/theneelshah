@@ -1,17 +1,17 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
   "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "name": "Neel Jitesh Shah",
+  "ascii": "theneelshah",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "theneelshah",
+    "linkedin": "theneelshah"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "theneelshah@gmail.com",
+  "ps1_hostname": "theneelshah",
   "ps1_username": "visitor",
   "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "resume_url": "https://drive.google.com/file/d/1paEFr9b8ZNGKzd10mDF7pfj4UU52Q6NR/view?usp=sharing",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
     "patreon": "https://patreon.com/cveinnt"
