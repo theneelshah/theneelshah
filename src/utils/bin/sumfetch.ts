@@ -38,7 +38,6 @@ const sumfetch = async (args: string[]): Promise<string> => {
       ▓▓▓   ▐▓▓   ▓▓   ▓▓▓   ▓▓▀             <u><a href="https://linkedin.com/in/${config.social.linkedin}" target="_blank">linkedin.com/in/${config.social.linkedin}</a></u> 
         ▀▓▓▄▄ ▀▓▓▄▓▓▄▓▓▓▄▄▓▓▀               -----------
             ▀▓▓▓▓▓▓▓▓▓▓▓▀▀                  
-
 `;
   }
 };

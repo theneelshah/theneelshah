@@ -1,10 +1,7 @@
-// List of commands that do not require API calls
-
 import * as bin from './index';
 import config from '../../../config.json';
 import headShotImg from '../../../public/assets/headshot/headshot.png';
 
-// Help
 export const help = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
   var c = '';
@@ -25,17 +22,16 @@ Type 'sumfetch' to display summary.
 `;
 };
 
-// Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
 
   return 'Opening Github repository...';
 };
 
-// About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
-Welcome to my website!
+Welcome to my Portfolio!
+
 More about me:
 'sumfetch' - short summary.
 'resume' - my latest resume.
@@ -80,13 +76,10 @@ export const hackernews = async (args: string[]): Promise<string> => {
   return `Opening Hackernews...`;
 };
 
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-
-  return `Searching reddit for ${args.join(' ')}...`;
+export const pwd = async (args: string[]): Promise<string> => {
+  return `https://www.theneelshah.com`;
 };
 
-// Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
   return args.join(' ');
 };
@@ -116,7 +109,6 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
-// Banner
 export const banner = (args?: string[]): string => {
   return `
   <div style="display: inline-flex; align-items: center;">
