@@ -113,12 +113,16 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
-export const work = async (): Promise<string> => {
+export const work = async (args?: string[]): Promise<string> => {
   return constants.workExp;
 };
 
-export const education = async (): Promise<string> => {
+export const education = async (args?: string[]): Promise<string> => {
   return constants.education;
+};
+
+export const volunteering = async (args?: string[]): Promise<string> => {
+  return constants.volunteering;
 };
 
 export const banner = (args?: string[]): string => {

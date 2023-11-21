@@ -61,6 +61,14 @@ const constants = {
   <h2 style="font-size: x-large;">Thakur Polytechnic, Mumbai University</h2>
   <h3 style="margin-top: -36px;">Diploma in Information Technology - June 2018</h3>
   `,
+  volunteering: `
+  <h2 style="font-size: x-large;">Rotaract Club of Bombay West</h2>
+  <h3 style="margin-top: -36px;">International Services Director</h3>
+  <h2 style="font-size: x-large;">Hult Prize Foundation</h2>
+  <h3 style="margin-top: -36px;">Organizer</h3>
+  <h2 style="font-size: x-large;">Indian Society for Technical Education</h2>
+  <h3 style="margin-top: -36px;">Senior Member</h3>
+  `,
 };
 
 export default constants;
