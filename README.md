@@ -1,0 +1,6 @@
+- I'm Neel
+- Currently pursuing Masters of Software Engineering at University of California, Irvine.
+- Have 2+ years of experience working as a Software Developer at a fast paced product company.
+- Hobbies: Working out, traveling, board games, collecting coins and currency.
+- neeljs@uci.edu
+- +1(949)-678-2052
