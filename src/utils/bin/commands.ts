@@ -1,18 +1,10 @@
 import * as bin from './index';
 import config from '../../../config.json';
+import constants from '../constants';
 import headShotImg from '../../../public/assets/headshot/headshot.png';
 
 export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
-
-  for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
-    } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
-    }
-  }
+  const c = constants.leftAlignText(Object.keys(bin).sort(), 3, 8);
 
   return `Welcome to my portfolio! Here are all the available commands:
 \n${c}\n
@@ -39,39 +31,52 @@ More about me:
 };
 
 export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
+  setTimeout(() => {
+    window.open(`${config.resume_url}`);
+  }, constants.timeout);
 
   return 'Opening my resume...';
 };
-
-// Contact
 export const email = async (args: string[]): Promise<string> => {
-  window.open(`mailto:${config.email}`);
+  setTimeout(() => {
+    window.open(`mailto:${config.email}`);
+  }, constants.timeout);
 
   return `Opening mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
+  setTimeout(() => {
+    window.open(`https://github.com/${config.social.github}/`);
+  }, constants.timeout);
 
   return 'Opening my github profile...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  setTimeout(() => {
+    window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+  }, constants.timeout);
 
   return 'Opening my linkedin profile...';
 };
 
-// Search
 export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
+  if (args.length === 0) {
+    return 'Usage: google [query]. Example: google openai';
+  }
+
+  setTimeout(() => {
+    window.open(`https://google.com/search?q=${args.join(' ')}`);
+  }, constants.timeout);
 
   return `Searching google for ${args.join(' ')}...`;
 };
 
 export const hackernews = async (args: string[]): Promise<string> => {
-  window.open('https://news.ycombinator.com/');
+  setTimeout(() => {
+    window.open('https://news.ycombinator.com/');
+  }, constants.timeout);
 
   return `Opening Hackernews...`;
 };
@@ -97,8 +102,7 @@ directories`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `unfortunately, i cannot afford more directories.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
