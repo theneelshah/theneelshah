@@ -4,7 +4,7 @@ import constants from '../constants';
 import headShotImg from '../../../public/assets/headshot/headshot.png';
 
 export const help = async (args: string[]): Promise<string> => {
-  const c = constants.leftAlignText(Object.keys(bin).sort(), 3, 8);
+  const c = constants.leftAlignText(Object.keys(bin).sort(), 3, 10);
 
   return `Welcome to my portfolio! Here are all the available commands:
 \n${c}\n
@@ -121,7 +121,7 @@ export const education = async (args?: string[]): Promise<string> => {
   return constants.education;
 };
 
-export const volunteering = async (args?: string[]): Promise<string> => {
+export const volunteer = async (args?: string[]): Promise<string> => {
   return constants.volunteering;
 };
 
