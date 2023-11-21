@@ -35,6 +35,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     }
   }, [history]);
 
+  const reset = () => {
+    clearHistory();
+    init();
+  };
+
   return (
     <>
       <Head>
@@ -54,7 +59,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
             setCommand={setCommand}
             setHistory={setHistory}
             setLastCommandIndex={setLastCommandIndex}
-            clearHistory={clearHistory}
+            clearHistory={reset}
           />
         </div>
       </div>
