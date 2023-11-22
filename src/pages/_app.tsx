@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
+import Script from 'next/script';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -26,6 +27,24 @@ const App = ({ Component, pageProps }) => {
       >
         <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
           <Component {...pageProps} inputRef={inputRef} />
+
+          <Script
+            async
+            id="google-analytics"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+          ></Script>
+          <Script
+            id="google-analytics-datalayer"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${process.env.GOOGLE_ANALYTICS}');
+                `,
+            }}
+          ></Script>
         </main>
       </div>
     </>
