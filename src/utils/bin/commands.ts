@@ -11,6 +11,7 @@ export const help = async (args: string[]): Promise<string> => {
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.\n
 Type 'summary' to display summary.
+Type 'gui' to open a GUI portfolio.
 `;
 };
 
@@ -26,8 +27,17 @@ Welcome to my Portfolio!
 
 More about me:
 'summary' - short summary.
+'gui' - my GUI based portfolio.
 'resume' - my latest resume.
 'readme' - my github readme.`;
+};
+
+export const gui = async (args: string[]): Promise<string> => {
+  setTimeout(() => {
+    window.open(`https://terminal.theneelshah.com`);
+  }, constants.timeout);
+
+  return `Opening my GUI portfolio...`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -37,6 +47,7 @@ export const resume = async (args: string[]): Promise<string> => {
 
   return 'Opening my resume...';
 };
+
 export const email = async (args: string[]): Promise<string> => {
   setTimeout(() => {
     window.open(`mailto:${config.email}`);
