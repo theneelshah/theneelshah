@@ -151,6 +151,7 @@ export const banner = (args?: string[]): string => {
 
 Hey there! I'm Neel Shah, currently doing my Masters of Software Engineering at University of California, Irvine.
 
+Type 'gui' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="https://www.theneelshah.com" target="_blank">here</a></u> for a basic GUI portfolio.
 Type 'help' to see the list of available commands.
 Type 'summary' to display summary.
 Type 'resume' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.resume_url}" target="_blank">here</a></u> for my resume.
