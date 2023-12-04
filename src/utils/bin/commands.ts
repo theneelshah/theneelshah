@@ -34,7 +34,7 @@ More about me:
 
 export const gui = async (args: string[]): Promise<string> => {
   setTimeout(() => {
-    window.open(`https://terminal.theneelshah.com`);
+    window.open(`https://www.theneelshah.com`);
   }, constants.timeout);
 
   return `Opening my GUI portfolio...`;
